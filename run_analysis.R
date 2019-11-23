@@ -79,7 +79,7 @@ fulldata2 <- mutate(fulldata, activity = case_when(
 
 
 # Save dataset to file ----------------------------------------------------
-write.csv(fulldata2, file = "./data/UCIHARclean.csv", row.names=FALSE)
+write.table(fulldata2, file = "./data/UCIHARclean.txt", row.names=FALSE)
 
 # =========================================================================
 # Part 2: creates a second, independent tidy data set with the 
@@ -94,5 +94,5 @@ summarymean <- select(fulldata2, -(type)) %>%
 
 
 # Save dataset to file ----------------------------------------------------
-write.csv(summarymean, file = "./data/UCIHARmean.csv", row.names=FALSE)
+write.table(summarymean, file = "./data/UCIHARmean.txt", row.names=FALSE)
 
